@@ -6,14 +6,22 @@
       </span>
       <v-spacer></v-spacer>
 
+      <div class="d-none d-md-flex">
+      <span v-if="grinBTCPrice" class="mr-8">{{ grinBTCPrice }} / BTC
+      ({{ grinBTCPriceChange }} %) </span>
+        <span v-if="grinUSDPrice" class="mr-8"> &#36;{{ grinUSDPrice }} ({{ grinUSDPriceChange }} %) </span>
+        <span>API status:</span>
+        <span @click="$router.push('/global-health-check')" class="mx-2"
+              :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
+      </div>
 
-      <span v-if="grinBTCPrice" class="mr-8">{{ grinBTCPrice }} / BTC ({{ grinBTCPriceChange }} %) </span>
-      <span v-if="grinUSDPrice" class="mr-8">{{ grinUSDPrice }} &#36; ({{ grinUSDPriceChange }} %) </span>
-
-      <span>API status:</span>
-
-      <span @click="$router.push('/global-health-check')" class="mx-2"
-            :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
+      <div class="d-md-none">
+        <span v-if="grinBTCPrice" class="mr-4">{{ grinBTCPrice }} BTC    </span>
+        <span v-if="grinUSDPrice" class="mr-4"> &#36;{{ grinUSDPrice }}  </span>
+        <span>API :</span>
+        <span @click="$router.push('/global-health-check')" class="mx-2"
+              :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
+      </div>
 
     </v-system-bar>
 
@@ -193,8 +201,8 @@ export default {
       headBarFixed: false,
       grinBTCPrice: "",
       grinBTCPriceChange: "",
-      grinUSDPrice:"",
-      grinUSDPriceChange:""
+      grinUSDPrice: "",
+      grinUSDPriceChange: ""
     }
 
   },
