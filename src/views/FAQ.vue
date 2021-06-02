@@ -68,7 +68,7 @@
           </template>
           <v-list-item link to="" v-scroll-to="'#faq-technical-tor'">
             <v-list-item-title>
-              <a  >Check TOR address</a>
+              <a  >Check GRIN wallet address</a>
             </v-list-item-title>
           </v-list-item>
 
@@ -152,11 +152,11 @@
 
       <h3 class="text-h4 grey--text text--darken-2   my-12"  id="faq-technical">Technical questions</h3>
 
-      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-tor">Check TOR address  <LinkButton copy-link="https://grinnode.live/faq#faq-technical-tor"/> </h3>
-      <span  >Check if the receiving TOR address is available. </span><br/>
+      <h3 class="text-h6 grey--text text--darken-3 my-2" id="faq-technical-tor">Check GRIN wallet address  <LinkButton copy-link="https://grinnode.live/faq#faq-technical-tor"/> </h3>
+      <span  >Check if the receiving grin wallet is available. </span><br/>
 
         <v-form class="pt-4" @submit.prevent="checkWallet" >
-          <v-text-field outlined :loading="is_checking"  v-model="wallet_address"   label="Enter wallet's address" />
+          <v-text-field outlined :loading="is_checking"  v-model="wallet_address"   label="Enter grin address such as grin1zxwrf..." />
         </v-form>
         <p class="success-message " v-if="walletCheckSuccess">Wallet is reachable and listening</p>
         <p class="error-message" v-if="walledCheckFail">Wallet address is not valid or not listening</p>
