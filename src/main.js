@@ -5,10 +5,12 @@ import router from './router';
 import vuetify from "@/plugins/vuetify";
 import Vuetify from "vuetify";
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import SERVER_NAME from './server_name';
+
 
 
 //const SERVER_NAME = "https://grinnode.live:8080";
-const SERVER_NAME="http://139.162.161.176:3000";
+// const SERVER_NAME="http://139.162.161.176:3000";
 const HEALTH_CHECK_API_URL = `${SERVER_NAME}/healthcheck`;
 const PEERS_API_URL = `${SERVER_NAME}/peers`;
 const AGENTS_API_URL = `${SERVER_NAME}/agents`;
@@ -150,3 +152,4 @@ new Vue({
     vuetify,
   render(h) { return h(App); },
 }).$mount('#app');
+

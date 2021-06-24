@@ -162,6 +162,8 @@
 <script>
 import WorldMap from "@/components/WorldMap";
 import HealthScoreChart from "@/components/HealthScoreChart";
+import SERVER_NAME from "../server_name";
+
 
 export default {
   name: "Stats",
@@ -172,7 +174,9 @@ export default {
     this.$dao.getAgents();
     this.$dao.getBlockHeight();
 
-    let agents_url = 'https://grinnode.live:8080/agents';
+
+
+    let agents_url = `${SERVER_NAME}/agents`;
     fetch(agents_url)
         .then(response => response.json())
         .then((result) => {

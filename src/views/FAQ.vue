@@ -257,6 +257,8 @@
 
 <script>
 import LinkButton from "@/components/LinkButton";
+import SERVER_NAME from "../server_name";
+
 export default {
   name: "FAQ",
   components:{LinkButton},
@@ -284,7 +286,7 @@ export default {
           // If user enters an ordinary url, check stucks so it needs to be removed
           this.wallet_address = this.wallet_address.replace("http://","").replace("https://","").replace("/")
 
-          fetch("https://grinnode.live:8080/walletcheck/"+ this.wallet_address).then(response => response.json())
+          fetch(`${SERVER_NAME}/walletcheck/`+ this.wallet_address).then(response => response.json())
             .then((result) => {
               if(result.isWalletValid){
                   this.is_wallet_valid = "success";
