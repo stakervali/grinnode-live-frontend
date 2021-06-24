@@ -9,7 +9,7 @@
       <div class="d-none d-md-flex">
       <span v-if="grinBTCPrice" class="mr-8">{{ grinBTCPrice }} / BTC
       ({{ grinBTCPriceChange }} %) </span>
-        <span v-if="grinUSDPrice" class="mr-8"> &#36;{{ grinUSDPrice }} ({{ grinUSDPriceChange }} %) </span>
+        <span v-if="grinUSDPrice" class="mr-8"> &#36; &nbsp; {{ grinUSDPrice }} ({{ grinUSDPriceChange }} %) </span>
         <span>API status:</span>
         <span @click="$router.push('/global-health-check')" class="mx-2"
               :style="this.$dao.statusStyle">{{ this.$dao.apiStatus }}</span>
