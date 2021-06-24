@@ -221,7 +221,9 @@
 
 
 <script>
-  export default {
+import {SERVER_NAME} from "@/server_name";
+
+export default {
     name: "Challenge",
     data: () => ({
       tab: null,
@@ -273,7 +275,7 @@
         this.tab=0;
       }
 
-      const peers_url =  'https://grinnode.live:8080/peers';
+      const peers_url =  `${SERVER_NAME}/peers`;
       let start_time = Date.now();
       fetch(peers_url)
           .then(response => response.json())

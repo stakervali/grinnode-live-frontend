@@ -162,7 +162,7 @@
 <script>
 import WorldMap from "@/components/WorldMap";
 import HealthScoreChart from "@/components/HealthScoreChart";
-import SERVER_NAME from "../server_name";
+import {SERVER_NAME} from "../server_name";
 
 
 export default {

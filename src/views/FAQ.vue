@@ -160,7 +160,7 @@
         </v-form>
         <p class="success-message " v-if="walletCheckSuccess">Wallet is reachable and listening</p>
         <p class="error-message" v-if="walledCheckFail">Wallet address is not valid or not listening</p>
-          <v-btn class="mt-2 mb-8" flat color="primary" @click.prevent="checkWallet"  >Check</v-btn>
+          <v-btn class="mt-2 mb-8"  color="primary" @click.prevent="checkWallet"  >Check</v-btn>
 
       <ul  class="text-left mt-4">
         <li>via HTTP <a class="ml-4" href="https://grinchck.uber.space">https://grinchck.uber.space/ </a> </li>
@@ -257,7 +257,7 @@
 
 <script>
 import LinkButton from "@/components/LinkButton";
-import SERVER_NAME from "../server_name";
+import {SERVER_NAME} from "../server_name";
 
 export default {
   name: "FAQ",
@@ -286,7 +286,10 @@ export default {
           // If user enters an ordinary url, check stucks so it needs to be removed
           this.wallet_address = this.wallet_address.replace("http://","").replace("https://","").replace("/")
 
-          fetch(`${SERVER_NAME}/walletcheck/`+ this.wallet_address).then(response => response.json())
+          console.log(`SERVER_NAME: ${SERVER_NAME}`);
+          fetch(`${SERVER_NAME}/walletcheck/`+ this.wallet_address,{ contentType:'application/json' }).then(response =>{
+            console.log(response);
+            return response.json()})
             .then((result) => {
               if(result.isWalletValid){
                   this.is_wallet_valid = "success";
