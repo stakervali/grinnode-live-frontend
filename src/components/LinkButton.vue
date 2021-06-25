@@ -14,9 +14,36 @@ name: "LinkButton",
  props:['copyLink'],
  methods: {
   click:function(){
-    console.log( this.copyLink +  " clicked");
-    navigator.clipboard.writeText(this.copyLink);
-    this.snackbar = true;
+    //console.log( this.copyLink +  " clicked");
+    // In order to work without https://
+    // https://stackoverflow.com/questions/51805395/navigator-clipboard-is-undefined
+    //
+    if (navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(this.copyLink);
+        this.snackbar =true;
+    }else{
+      let textArea = document.createElement("textarea");
+      textArea.value = this.copyLink;
+      // make the textarea out of viewport
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      textArea.style.top = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      this.snackbar = true;
+      return new Promise((res, rej) => {
+        // here the magic happens
+        document.execCommand('copy') ? res() : rej();
+        textArea.remove();
+
+      });
+    }
+
+
+
+
+
   }
  }
 }
