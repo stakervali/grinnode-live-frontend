@@ -4,7 +4,7 @@ import App from './App.vue';
 import router from './router';
 import vuetify from "@/plugins/vuetify";
 import Vuetify from "vuetify";
-import 'material-design-icons-iconfont/dist/material-design-icons.css'
+
 import {SERVER_NAME} from './server_name';
 
 
