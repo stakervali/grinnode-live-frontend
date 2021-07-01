@@ -116,7 +116,7 @@
 
           <v-list-item router key="HOME" to="/">
             <v-list-item-action>
-              <v-icon class="black--text">home</v-icon>
+              <HomeIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">HOME</v-list-item-title>
@@ -125,7 +125,7 @@
 
           <v-list-item router key="TUTORIALS" to="/tutorials">
             <v-list-item-action>
-              <v-icon class="black--text">receipt_long</v-icon>
+              <TutorialIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">TUTORIALS</v-list-item-title>
@@ -134,7 +134,7 @@
 
           <v-list-item router key="CHALLENGEs" to="/challenge/0">
             <v-list-item-action>
-              <v-icon class="black--text">watch</v-icon>
+              <ChallengesIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">CHALLENGES</v-list-item-title>
@@ -144,7 +144,7 @@
 
           <v-list-item router key="STATS" to="/stats">
             <v-list-item-action>
-              <v-icon class="black--text">leaderboard</v-icon>
+              <StatsIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">STATS</v-list-item-title>
@@ -153,7 +153,7 @@
 
           <v-list-item router key="FAQ" to="/faq">
             <v-list-item-action>
-              <v-icon class="black--text">question_answer</v-icon>
+              <FaqIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">FAQ</v-list-item-title>
@@ -163,7 +163,7 @@
 
           <v-list-item router key="CONTACT" to="/contact">
             <v-list-item-action>
-              <v-icon class="black--text">contact_page</v-icon>
+              <ContactIcon class="black--text" />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title class="black--text">Contact</v-list-item-title>
@@ -179,7 +179,7 @@
 
       <v-chip class="ml-2 mt-4" dark label large color="info"
               href="https://github.com/MCM-Mike/grinnode.live/blob/master/donation.md">
-        <v-icon left>mood</v-icon>
+        <DonationIcon />
         Donations & Sponsorships
       </v-chip>
 
@@ -197,9 +197,10 @@ import StatsIcon from "./icons/StatsIcon";
 import TutorialIcon from "./icons/TutorialIcon";
 import FaqIcon from "./icons/FaqIcon";
 import ContactIcon from "./icons/ContactIcon";
+import DonationIcon from "./icons/DonationIcon";
 export default {
   name: "Header",
-  components: {ContactIcon, FaqIcon, TutorialIcon, StatsIcon, ChallengesIcon,HomeIcon},
+  components: {DonationIcon, ContactIcon, FaqIcon, TutorialIcon, StatsIcon, ChallengesIcon,HomeIcon},
   data() {
     return {
       tab: true,
