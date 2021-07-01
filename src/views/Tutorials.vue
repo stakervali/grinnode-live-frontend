@@ -14,40 +14,40 @@
           <template v-slot:activator>
             <v-list-item link to="" v-scroll-to="'#tutorial-grinnode'">
               <v-list-item-title class="text-h6">
-                <router-link to="" class="text-wrap">How to use Grinnode.live</router-link>
+                <a>How to use Grinnode.live</a>
               </v-list-item-title>
             </v-list-item>
           </template>
 
           <v-list-item link to="" v-scroll-to="'#tutorial-wallet-connect'">
             <v-list-item-title>
-              <router-link class="text-wrap" to="" v-scroll-to="'#tutorial-wallet-connect'">Connect your GRIN-Wallet to
+              <a>Connect your GRIN-Wallet to
                 Grinnode.live
-              </router-link>
+              </a>
             </v-list-item-title>
           </v-list-item>
 
           <v-list-item link to="" v-scroll-to="'#tutorial-seed'">
             <v-list-item-title>
-              <router-link class="text-wrap" to="" v-scroll-to="'#tutorial-seed'">Use Grinnode.live High-Available
+              <a>Use Grinnode.live High-Available
                 Seed-Node
-              </router-link>
+              </a>
             </v-list-item-title>
           </v-list-item>
 
           <v-list-item link to="" v-scroll-to="'#tutorial-node-connect'">
             <v-list-item-title>
-              <router-link class="text-wrap" to="" v-scroll-to="'#tutorial-node-connect'">Connect your GRIN-Node to
+              <a>Connect your GRIN-Node to
                 Grinnode.live
-              </router-link>
+              </a>
             </v-list-item-title>
           </v-list-item>
 
           <v-list-item link to="" v-scroll-to="'#tutorial-api-examples'">
             <v-list-item-title>
-              <router-link class="text-wrap" to="" v-scroll-to="'#tutorial-api-examples'">Public Grinnode.live API
+              <a>Public Grinnode.live API
                 examples
-              </router-link>
+              </a>
             </v-list-item-title>
           </v-list-item>
 
@@ -70,7 +70,7 @@
           <template v-slot:activator>
             <v-list-item link to="" v-scroll-to="'#tutorial-api-documentation'">
               <v-list-item-title class="text-h6">
-                <router-link to="">GRIN API documentation</router-link>
+                <a>GRIN API documentation</a>
               </v-list-item-title>
             </v-list-item>
           </template>
