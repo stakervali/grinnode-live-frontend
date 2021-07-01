@@ -56,17 +56,17 @@
         <v-sheet color="#fef102" class="mx-auto pb-0 hidden-sm-and-down negative-bottom-margin">
           <v-chip medium to="/" color="#fef102" class="rounded-0 px-2  ">
             <span class="text-subtitle-2 text--primary">HOME</span>
-            <v-icon right>home</v-icon>
+            <HomeIcon/>
           </v-chip>
           <v-chip to="/tutorials" color="#fef102" class="rounded-0">
             <span class="text-subtitle-2 text--primary ">TUTORIALS</span>
-            <v-icon right>receipt_long</v-icon>
+            <TutorialIcon/>
           </v-chip>
           <v-menu offset-y>
             <template v-slot:activator="{ on, attrs }">
               <v-chip color="#fef102" class="rounded-0" v-bind="attrs" v-on="on">
                 <span class="text-subtitle-2 text--primary">CHALLENGES</span>
-                <v-icon right>watch</v-icon>
+                <ChallengesIcon/>
               </v-chip>
             </template>
             <v-list color="#fef102">
@@ -82,15 +82,15 @@
 
           <v-chip to="/stats" color="#fef102" class="rounded-0">
             <span class="text-subtitle-2 text--primary">STATS</span>
-            <v-icon right>leaderboard</v-icon>
+             <StatsIcon />
           </v-chip>
           <v-chip to="/faq" color="#fef102" class="rounded-0">
             <span class="text-subtitle-2 text--primary">FAQ</span>
-            <v-icon right>question_answer</v-icon>
+            <FaqIcon />
           </v-chip>
           <v-chip to="/contact" color="#fef102" class="rounded-0">
             <span class="text-subtitle-2 text--primary">CONTACT</span>
-            <v-icon right>contact_page</v-icon>
+            <ContactIcon />
           </v-chip>
 
 
@@ -191,8 +191,15 @@
 </template>
 
 <script>
+import HomeIcon from "./icons/HomeIcon";
+import ChallengesIcon from "./icons/ChallengesIcon";
+import StatsIcon from "./icons/StatsIcon";
+import TutorialIcon from "./icons/TutorialIcon";
+import FaqIcon from "./icons/FaqIcon";
+import ContactIcon from "./icons/ContactIcon";
 export default {
   name: "Header",
+  components: {ContactIcon, FaqIcon, TutorialIcon, StatsIcon, ChallengesIcon,HomeIcon},
   data() {
     return {
       tab: true,
