@@ -285,10 +285,7 @@ export default {
 
           // If user enters an ordinary url, check stucks so it needs to be removed
           this.wallet_address = this.wallet_address.replace("http://","").replace("https://","").replace("/")
-
-          console.log(`SERVER_NAME: ${SERVER_NAME}`);'application/json'
           fetch(`${SERVER_NAME}/walletcheck/`+ this.wallet_address).then(response =>{
-            console.log(response);
             return response.json()})
             .then((result) => {
               if(result.isWalletValid){
