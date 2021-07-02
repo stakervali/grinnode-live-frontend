@@ -149,9 +149,9 @@
                 to Grinnode.live, we will add 10 more T-Shirts to the winning pool.
               </p>
               <ul >
-                <li><v-icon left>label</v-icon> Winners will be randomly chosen from all connected nodes during the 4 week Challenge</li>
-                <li><v-icon left>label</v-icon> Top20 Nodes can not win any additional T-Shirts</li>
-                <li><v-icon left>label</v-icon> Only non-commercial Grin-Nodes can win any prices.</li>
+                <li><v-icon left>{{labelSvgPath}}</v-icon> Winners will be randomly chosen from all connected nodes during the 4 week Challenge</li>
+                <li><v-icon left>{{ labelSvgPath }}</v-icon> Top20 Nodes can not win any additional T-Shirts</li>
+                <li><v-icon left>{{ labelSvgPath }}</v-icon> Only non-commercial Grin-Nodes can win any prices.</li>
               </ul>
 
               <v-divider class="my-8" ></v-divider>
@@ -226,6 +226,7 @@ import {SERVER_NAME} from "@/server_name";
 export default {
     name: "Challenge",
     data: () => ({
+      labelSvgPath : "M17.63,5.84C17.27,5.33 16.67,5 16,5H5C3.9,5 3,5.9 3,7V17C3,18.1 3.9,19 5,19H16C16.67,19 17.27,18.66 17.63,18.15L22,12L17.63,5.84Z",
       tab: null,
       bugChallengeData:{
         forum_link:"https://forum.grin.mw/t/grinnode-live-winter-2020-bug-bash-challenge-and-free-grin-btc-prizes-giveaway/8060",
