@@ -92,7 +92,7 @@
 
       <h3 class="text-h6 grey--text text--darken-2 text-left my-4" id="tutorial-wallet-connect">
 
-        Connect your GRIN-Wallet to Grinnode.live&nbsp;</h3>
+        Connect your GRIN-Wallet to Grinnode.live&nbsp; <LinkButton copy-link="https://grinnode.live/tutorials#tutorial-wallet-connect"/> </h3>
 
       <p class="text-left"> There are two options to use grin-wallet with connecting to grinnode.live.</p>
 
@@ -158,7 +158,7 @@
 
 
       <h3 class="text-h6 grey--text text--darken-2 text-left my-4" id="tutorial-seed">Use Grinnode.live High-Available
-        Seed-Node </h3>
+        Seed-Node  <LinkButton copy-link="https://grinnode.live/tutorials#tutorial-seed" /> </h3>
       <p class="text-justify"> Connect to lot of Grin-Nodes fast using our Seed-Node by editing your grin-server.toml.
         Or download our example <a href="https://github.com/MCM-Mike/grinnode.live/blob/master/grin-server.toml">grin-server.toml</a>
       </p>
@@ -178,7 +178,8 @@
 
 
       <h6 class="text-h6 grey--text text--darken-2 text-left my-4" id="tutorial-node-connect">Connect your GRIN-Node to
-        Grinnode.live&nbsp;</h6>
+        Grinnode.live&nbsp;  <LinkButton copy-link="https://grinnode.live/tutorials#tutorial-node-connect" />  </h6>
+
 
 
       <p class="text-justify">Edit your Grin-Node <strong>grin-server.toml</strong></p>
@@ -282,8 +283,11 @@
 </template>
 
 <script>
+import LinkButton from "../components/LinkButton";
+
 export default {
   name: "Tutorials",
+  components:{LinkButton},
   mounted() {
     this.$dao.getAgents();
     this.$dao.ioCheck();
