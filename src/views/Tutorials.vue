@@ -117,7 +117,7 @@
       </p>
       <v-card outlined dark color="grey darken-3" class="pa-4 my-4">
         <div class="code text-left">
-          <span> grin-wallet -r https://grinnode.live:3413 -t C:\Users\YOUR_WINDOWS_ACCOUNT_NAME\Desktop\orange  </span><br/>
+          <span> grin-wallet -r https://grinnode.live:3413 -t C:\Users\YOUR_WINDOWS_ACCOUNT_NAME\Desktop\orange init</span><br/>
         </div>
       </v-card>
 
